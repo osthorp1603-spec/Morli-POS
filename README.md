@@ -1,22 +1,18 @@
-# Sistema POS Profesional
-## Descripción
-Sistema de punto de venta (POS) para la gestión integral de una tienda de regalos. 
-Permite registrar ventas con lector de código de barras, controlar el inventario, 
-gestionar clientes, crear anchetas/decoraciones, generar facturas e imprimir tickets 
-en impresora térmica. Incluye un módulo contable completo con reportes de utilidad, 
-flujo de caja, estado de resultados, balance general y más.
+# Professional POS System
+## Description
+Point of sale (POS) system for the complete management of a gift shop. It allows registering sales with a barcode scanner, controlling inventory, managing customers, creating gift baskets/decorations, generating invoices, and printing tickets on a thermal printer. It includes a full accounting module with reports for profit, cash flow, income statement, balance sheet, and more.
 
-## Tecnologías utilizadas
+## Technologies Used
 
 - Python
-- Tkinter (interfaz gráfica)
-- SQLite (base de datos local)
-- ReportLab (generación de facturas y etiquetas en PDF)
-- win32print (impresión térmica POS y apertura de cajón)
-- Matplotlib (gráficos de reportes)
-- Arquitectura modular (UI, Lógica y Utilidades)
+- Tkinter (graphical interface)
+- SQLite (local database)
+- ReportLab (invoice and label generation in PDF)
+- win32print (POS thermal printing and cash drawer opening)
+- Matplotlib (report charts)
+- Modular architecture (UI, Logic, and Utilities)
 
-## Estructura del proyecto
+## Project Structure
 ```
 MorliPOS/
 
@@ -104,31 +100,26 @@ MorliPOS/
 
 └── evidencias/
 ```
-## Explicación técnica
+## Technical explanation
 
-El sistema fue desarrollado utilizando Python con interfaz gráfica en Tkinter y 
-una base de datos SQLite local.
+The system was developed using Python with a graphical interface in Tkinter and a local SQLite database.
 
-El proyecto sigue una arquitectura modular separando responsabilidades:
+The project follows a modular architecture that separates responsibilities:
 
-- **UI:** contiene las ventanas del sistema: ventas, inventario, clientes, anchetas, 
-  movimientos de inventario y las ventanas contables de interfaz.
-- **Lógica:** contiene las operaciones de negocio y reportes: corte Z, cancelaciones (RF), 
-  generación de códigos de barras, y todos los cálculos contables (utilidad, balance, 
-  estado de resultados, punto de equilibrio, etc.).
-- **Utilidades:** herramientas auxiliares como la impresión de tickets en la impresora térmica.
+- **UI:** contains the system windows: sales, inventory, customers, gift baskets, inventory movements, and the accounting interface windows.
+- **Logic:** contains the business operations and reports: Z-report, cancellations (RF), barcode generation, and all accounting calculations (profit, balance sheet, income statement, break-even point, etc.).
+- **Utilities:** auxiliary tools such as ticket printing on the thermal printer.
 
+The system flow is:
 
-El flujo general del sistema es:
+1. The cashier registers products using the barcode scanner or manual search.
+2. At checkout, the system accepts cash, QR, card, or split payment.
+3. The sale is saved to the database, stock is deducted, and the invoice is generated in PDF.
+4. The ticket is printed on the thermal printer and, if payment is in cash, the cash drawer opens.
+5. At the end of the day, the Z-report is generated, producing the cash summary and closing the session.
+6. The administrator can review profit reports, inventory, and the full accounting.
 
-1. El vendedor registra los productos mediante el lector de código de barras o búsqueda manual.
-2. Al cobrar, el sistema acepta pago en efectivo, QR, tarjeta o pago dividido.
-3. La venta se guarda en la base de datos, se descuenta el stock y se genera la factura en PDF.
-4. El ticket se imprime en la impresora térmica y, si el pago es en efectivo, se abre el cajón.
-5. Al final del día se realiza el Corte Z, que genera el resumen de caja y cierra la jornada.
-6. El administrador puede consultar reportes de utilidad, inventario y la contabilidad completa.
-
-## Evidencias
+## Evidences
 
 ![ventana_principal](evidencias/ventanaprincipal.png)
 ![ventana_de_compra](evidencias/ventanaventa.png)
