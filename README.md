@@ -119,7 +119,7 @@ The system flow is:
 5. At the end of the day, the Z-report is generated, producing the cash summary and closing the session.
 6. The administrator can review profit reports, inventory, and the full accounting.
 
-## Evidences
+## Evidence
 
 ![ventana_principal](evidencias/ventanaprincipal.png)
 ![ventana_de_compra](evidencias/ventanaventa.png)
