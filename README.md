@@ -1,4 +1,4 @@
-# Control de Asistencia de Trabajadores
+# Sistema POS Profesional
 ## Descripción
 Sistema de punto de venta (POS) para la gestión integral de una tienda de regalos. 
 Permite registrar ventas con lector de código de barras, controlar el inventario, 
